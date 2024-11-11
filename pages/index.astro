@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import UserList from '../components/UserList';
+
+const apiUrl = import.meta.env.PUBLIC_API_URL;
+const response = await fetch(`${apiUrl}/users`);
+const users = await response.json();
+---
+
+<Layout title="Welcome to Astro.">
+		<UserList client:load />
+</Layout>

@@ -1,0 +1,115 @@
+<!-- Navbar.astro -->
+<nav class="navbar">
+	<div class="navbar__container">
+	  <!-- Logo -->
+	  <a href="/" class="navbar__logo">Milay</a>
+	  
+	  <!-- Barre de recherche -->
+	  <div class="navbar__search">
+		<input type="text" placeholder="Rechercher des produits, des marques et plus" class="navbar__search-input" />
+		<button class="navbar__search-button">
+		  <i class="fas fa-search"></i>
+		</button>
+	  </div>
+  
+	  <!-- Icônes de la barre de navigation -->
+	  <div class="navbar__icons">
+		<div class="navbar__icon">
+		  <i class="fas fa-user"></i>
+		  <span class="navbar__icon-label">Compte</span>
+		</div>
+		<div class="navbar__icon">
+		  <i class="fas fa-shopping-cart"></i>
+		  <span class="navbar__icon-badge">2</span>
+		  <span class="navbar__icon-label">Panier</span>
+		</div>
+	  </div>
+	</div>
+  </nav>
+  
+  <style lang="scss">
+	.navbar {
+	  width: 100%;
+	  background-color: #131921; /* Couleur de fond de la navbar */
+	  color: white;
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  z-index: 1000;
+	  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	
+	  &__container {
+		max-width: 1500px;
+		margin: 0 auto;
+		padding: 0.5rem 1rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	  }
+	
+	  &__logo {
+		font-size: 2rem;
+		font-weight: bold;
+		color: #ff9900;
+		text-decoration: none;
+	  }
+	
+	  &__search {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #fff;
+		border-radius: 24px;
+		padding: 0.5rem;
+		width: 60%;
+	  }
+  
+	  &__search-input {
+		border: none;
+		outline: none;
+		padding: 0.5rem;
+		width: 90%;
+		font-size: 1rem;
+		border-radius: 24px;
+	  }
+  
+	  &__search-button {
+		background-color: #febd69;
+		border: none;
+		padding: 0.5rem;
+		border-radius: 24px;
+		cursor: pointer;
+		color: #333;
+	  }
+  
+	  &__icons {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+	  }
+  
+	  &__icon {
+		font-size: 1.2rem;
+		color: white;
+		cursor: pointer;
+		position: relative;
+  
+		&-badge {
+		  position: absolute;
+		  top: -8px;
+		  right: -8px;
+		  background-color: #ff4444;
+		  color: white;
+		  border-radius: 50%;
+		  padding: 0.2rem 0.5rem;
+		  font-size: 0.8rem;
+		}
+  
+		&-label {
+		  display: block;
+		  font-size: 0.8rem;
+		}
+	  }
+	}
+  </style>
+  
